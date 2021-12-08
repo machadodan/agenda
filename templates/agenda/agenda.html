@@ -1,0 +1,77 @@
+  {% extends "agenda/model-page.html" %}
+  {% block content %}
+
+  <div id="main" class="container-fluid" xmlns:color="http://www.w3.org/1999/xhtml"
+       xmlns:background-color="http://www.w3.org/1999/xhtml">
+     <div id="top" class="row">
+         <div class="col-md-3">
+             <h3 style="color: #31B0D5">Eventos</h3>
+         </div>
+      <div class="col-md-6">
+        <div class="input-group h2">
+            <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Itens">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+      </div>
+        <div class="col-md-3">
+          <a href="evento/" class="btn btn-primary pull-right h2">Novo Evento</a>
+        </div>
+    </div> <!-- /#top -->
+
+     <div id="list" class="row">
+    <div class="table-responsive col-md-12">
+        <table class="table table-striped" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Titulo</th>
+                    <th>Data/Hora</th>
+                    <th>Descrição</th>
+                    <th class="actions">Ações</th>
+                 </tr>
+            </thead>
+             <tbody>
+             <tr>
+               <div style="font-size: 18px">
+                   {% for evento in eventos %}
+
+                      <div style={% if get_evento_atrasado %}
+                           "color: red"
+                           {% endif %}>
+                    <td>{{ evento.id }}</td>
+                    <td>{{ evento.titulo }}</td>
+                    <td>{{ evento.get_data_evento }}</td>
+                    <td>{{ evento.descricao }}</td>
+
+                    <td class="actions">
+                        <a class="btn btn-success btn-xs" href="evento/evento_detail/?id={{ evento.id }}">Visualizar</a>
+                        <a class="btn btn-warning btn-xs" href="evento/?id={{ evento.id }}">Editar</a>
+                        <a class="btn btn-danger btn-xs"  href="evento/delete/{{ evento.id }}/">Excluir</a>
+                    </td>
+                </div>
+             </tr>
+                   {% endfor %}
+             </tbody>
+         </table>
+        </div>
+      <!-- /#list -->
+
+     <div id="bottom" class="row">
+       <div class="col-md-12">
+          <ul class="pagination">
+            <li class="disabled"><a>&lt; Anterior</a></li>
+            <li class="disabled"><a>1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
+            </ul><!-- /.pagination -->
+       </div>
+
+    </div>  <!-- /#main -->
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "agenda/model-page.html" %}
+
+{% block content %}
+
+    <div class="container-fluid">
+       <h3 style="color: #31B0D5">Cadastro de eventos</h3>
+    </div>
+    <br>
+<form action="submit" method="POST">{% csrf_token %}
+
+   <div class="form-row">
+       <div class="form-group col-md-5">
+            <label for="inputTitulo">Titulo</label>
+            <input type="number" name="id_evento" value="{{ evento.id }}" hidden>
+            <input type="text" class="form-control" name="titulo" id="inputTitulo" placeholder="Titulo" required
+                   value="{{ evento.titulo }}">
+       </div>
+                   <br><br><br><br>
+         <div class="form-group col-md-3">
+            <label for="inputData"> Data do Enveto</label>
+            <input type="datetime-local" required class="form-control"  id="inputData" name="data_evento"
+                   value="{{ evento.get_data_input_evento }}">
+         </div>
+                   <br><br><br><br>
+              <div class="form-group col-md-5">
+                 <label for="inputDescricao">Descrição</label>
+                 <br>
+                <textarea name="descricao" class="form-control" id="inputDescricao" required rows="5" cols="25">{{ evento.descricao }}</textarea>
+              </div>
+                    <br><br><br><br><br><br><br><br>
+
+                <div class="col-xs-3 col-sm-1">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-plus"></i><span>Salvar</span></button>
+                 </div>
+                        <a href="/" class="btn  btn-default">Cancelar</a>
+    </div>
+   </div>
+</form>
+<br>
+{% endblock %}

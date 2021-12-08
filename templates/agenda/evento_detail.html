@@ -1,0 +1,34 @@
+
+    <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link para o arquivo Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <title>EventoDetalhe</title>
+
+        <div id="main" class="container-fluid">
+       <h2  class="page-header" style="color: #286090">Detalhes do Evento</h2>
+    </div>
+
+    </head>
+
+  <div class="container  h-100">
+      <div class="row align-items-start">
+
+        <div class="col-6 mx-auto">
+                   <div class="card text-white bg-success mb-3" style="max-width: 70rem;">
+                     <div class="card-body">
+                         <p><b>Numero:</b> {{ evento.id }}</p>
+                         <p><b>Titulo:</b> {{ evento.titulo }}</p>
+                         <p><b>Descrição:</b> {{ evento.descricao}}</p>
+                          <p><b>Data Evento:</b> {{ evento.get_data_evento }}</p>
+                      </div>
+                        <br>
+                           <a href="/" class="btn btn-primary">Close</a>
+                   </div>
+         </div>
+     </div>
+  </div>
+
+       <br><br><br>
+ {% include "agenda/model-footer.html" %}

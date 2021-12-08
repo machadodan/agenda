@@ -7,6 +7,7 @@ class Evento(models.Model):
      descricao = models.TextField(blank=True, null=True)
      data_evento = models.DateTimeField(verbose_name='Data do Evento')
      data_criacao = models.DateTimeField(auto_now=True)
+
      #atribuir um evento a um usuario
      usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
@@ -22,7 +23,7 @@ class Evento(models.Model):
           return self.data_evento.strftime('%d/%m/%Y %H:%M')
 
      def get_data_input_evento(self):
-          return self.data_evento.strftime('%Y-%m-%dT%H:%M')
+          return self.data_evento.strftime('%Y-%m-%dT %H:%M')
 
      def get_evento_atrasado(self):
           if self.data_evento < datetime.now():
