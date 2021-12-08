@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b496303-1b6f-4e65-b5cb-01445ddfda3b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/filters.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/agenda/evento_detail.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/agenda/settings.py" afterPath="$PROJECT_DIR$/agenda/settings.py" />
-      <change beforePath="$PROJECT_DIR$/agenda/urls.py" afterPath="$PROJECT_DIR$/agenda/urls.py" />
-      <change beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
-      <change beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/templates/agenda.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/evento.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/model-footer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/model-header.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/model-page.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
