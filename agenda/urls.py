@@ -20,6 +20,8 @@ from core import views
 #serve para redirecionar a pagina para home se não colocar
 from django.views.generic import RedirectView
 
+# urls de controle de acesso ao sistema
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/', views.lista_eventos),

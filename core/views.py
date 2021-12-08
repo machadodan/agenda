@@ -96,7 +96,7 @@ def json_lista_evento(request):
     evento = Evento.objects.filter(usuario=usuario).values('id', 'titulo')
     return JsonResponse(list(evento), safe=False)
 
-
+# view para visualização de detalhe do evento
 @login_required(login_url='/login/')
 def evento_detail(request):
     id_evento = request.GET.get('id')
